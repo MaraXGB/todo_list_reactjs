@@ -1,9 +1,9 @@
-function TodoItem(){
+function TodoItem({text}){
     return(
       /****ELEMENTOS */
       <li>
         <span>V</span>
-        <span>Limpiar Cocina</span>
+        <span>{text}</span>
         <span>X</span>
       </li>
     );

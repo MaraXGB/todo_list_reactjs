@@ -1,24 +1,27 @@
+import React from 'react';
+
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { CreateTodoButton } from './CreateTodoButton';
 import { TodoItem } from './TodoItem';
-import './App.css';
+
+const defaultArr = [{text: 'Limpiar cocina', completed:false},{text:'Limpiar cuarto', completed: true}, {text:'Limpiar Baño', completed:true}];
 
 function App() {
   return (
   
-    <div className="App">
-      <TodoCounter/>
+    <React.Fragment>
+      <TodoCounter total={25} completed={16}/>
       <TodoSearch/>
       <TodoList>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        {defaultArr.map(todo => (
+           <TodoItem key={todo.text} text={todo.text} completed={todo.completed}/>
+          ))}
       </TodoList>
       <CreateTodoButton/>
      {/* Esto es un comentario */}
-    </div>
+    </React.Fragment>
   );
 }
 

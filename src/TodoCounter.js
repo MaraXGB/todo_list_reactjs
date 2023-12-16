@@ -1,9 +1,19 @@
 import React from 'react'
-
-function TodoCounter(){
+import './TodoCounter.css'
+// const styles={
+//   fontSize: '24px',
+//   textAlign: 'center',
+//   margin: '0',
+//   padding: '48px'
+// };
+function TodoCounter({ total, completed }){
     return(
       /****ELEMENTOS */
-      <h1>Has completado 3 de 5 TODOs</h1>
+      <div className='todo-counter-header'>
+        <img src='https://nexdevus.com/assets/imgs/logo_white.png'/>
+        <h1>Hola, Mara</h1>
+        <h2>Has completado <span>{completed}</span> de <span>{total}</span> TODOs</h2>
+      </div>
     );
   }
 
