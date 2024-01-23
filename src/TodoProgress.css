@@ -1,0 +1,45 @@
+.todo-progress{
+    background-color: #e8eaea;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 30%;
+    margin: 20px auto;
+}
+.todo-progress h3{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.todo-progress span{
+    font-size: 24px;
+    text-shadow: none;
+}
+.progress-chart{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: conic-gradient(rgb(18, 45, 142) 252deg, #e8eaea 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.progress-chart::before{
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #E8EAEA;
+}
+.progress-chart span{
+    color: black;
+    font-size: 24px;
+    z-index: 2;
+    font-weight: 600;
+}

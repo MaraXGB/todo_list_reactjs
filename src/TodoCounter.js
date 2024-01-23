@@ -8,12 +8,8 @@ import './TodoCounter.css'
 // };
 function TodoCounter({ total, completed }){
     return(
-      /****ELEMENTOS */
-      <div className='todo-counter-header'>
-        <img src='https://nexdevus.com/assets/imgs/logo_white.png'/>
-        <h1>Hola, Mara</h1>
+      /****ELEMENTOS */ 
         <h2>Has completado <span>{completed}</span> de <span>{total}</span> TODOs</h2>
-      </div>
     );
   }
 

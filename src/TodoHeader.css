@@ -1,0 +1,33 @@
+.todo-header {
+    position: relative;
+    height: 500px;
+    background: #0b345d;
+    background-image: linear-gradient(155deg, #e6e6e6 0%, #eaeaea 50%, #ffffff 100%);
+  }
+.todo-header--container{
+    width: 70%;
+    margin: auto;
+    padding-top: 100px;
+    position: relative;
+}
+.todo-header--container h1 {
+    color: rgb(89, 89, 89);
+    padding-top: 20px;
+  }
+  .todo-header--container span{
+    color: #023A69;
+    
+  }  
+  svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+  .todo-header--container img{
+    width: 60px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 50px;
+  }

@@ -1,6 +1,7 @@
 .create-todo-button{
-    border-radius: 50%;
-    background-color: whitesmoke;
+    /* border-radius: 50%;*/
+    background-color: rgba(245, 245, 245, 0); 
+
     color: #023A69;
     font-size: 50px;
     font-weight: bold;
@@ -8,16 +9,22 @@
     cursor: pointer;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 230px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 64px;
     height: 64px;
-    box-shadow: 0px 5px 25px rgba(56, 56, 56, 0.93);
+    /* box-shadow: 0px 5px 25px rgba(56, 56, 56, 0.93); */
     transform: rotate(0);
     transition: .3s ease;
 }
 .create-todo-button:hover{
     transform: rotate(224deg);
+}
+.hidde{
+    display: none;
+}
+.show{
+    display: flex;
 }

@@ -1,0 +1,50 @@
+.modal-task{
+    width: 30%;
+    height: 100vh;
+    background-color: whitesmoke;
+    position: fixed;
+    right: 0;
+    top:0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+}
+.task-title{
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #1E1E1F;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.task-label{
+    padding-left: 26px;
+    text-align: left;
+    font-size: 24px;
+    font-family: 'Montserrat';
+    color: #1E1E1F;
+    font-weight: bold;
+}
+.task-input{
+    border-radius: 10px;
+    border: 2px solid #dbdbdb;
+    margin: 10px 24px;
+    height: 40px;
+    padding-left: 40px;
+    width: calc(100% - 62px);
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #1E1E1F;
+}
+.task-input:focus {
+    outline-color: #61DAFA;
+}
+@media (max-width:320px){
+    .modal-task{
+        width: 70%;
+    }
+    .task-input{
+        padding-left: 10px;
+    }
+} 

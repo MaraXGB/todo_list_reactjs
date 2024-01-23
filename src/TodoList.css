@@ -1,3 +1,6 @@
-ul{
-    background-color: rgba(255, 255, 255, 0.661);
-}
+.TodoList {
+    margin: 0 auto;
+    padding: 0 0 56px 0;
+    list-style: none;
+    width: 70%;
+  }

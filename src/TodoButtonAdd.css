@@ -1,0 +1,26 @@
+.button-add{
+    background-color: #0b345d;
+    border-radius: 10px;
+    border: none;
+    width: calc(100% - 62px);
+    height: auto;
+    margin: 10px 24px;
+    padding: 5px 0;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 60px;
+    cursor: pointer;
+}
+.button-add:hover{
+    background-color: whitesmoke;
+    color: #0b345d;
+}
+.hidde{
+    display: none;
+}
+.show{
+    display: block;
+}

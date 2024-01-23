@@ -1,13 +1,7 @@
 .todo-counter-header{
+ padding: 24px;
+}
 
-}
-.todo-counter-header img{
-  width: 200px;
-  height: auto;
-  position: absolute;
-  right: 10px;
-  top: 10px
-}
 .todo-counter-header h1{
 
     font-size: 24px;
@@ -20,13 +14,10 @@
     padding-top: 100px; 
     
   }
-.todo-counter-header h2{
-    font-family: 'Share Tech', sans-serif;
-    margin: 0;
-    padding-left: 10px;
-    color: white;
+ h2{
+    color: rgb(89, 89, 89);
   }
-  .todo-counter-header span{
+   span{
     font-size: 40px;
     text-shadow: 0px 5px 25px rgba(56, 56, 56, 0.93);
   }
