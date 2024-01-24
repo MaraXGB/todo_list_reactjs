@@ -11,11 +11,21 @@ import { CreateTaskModal } from './CreateTaskModal';
 const defaultArr = [{text: 'Limpiar cocina', completed:false},{text:'Limpiar cuarto', completed: true}, {text:'Limpiar Baño', completed:true}];
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultArr);
+  const [searchValue, setSearchValue] = React.useState("");
+
+  const completedTodos = todos.filter(todo => !!todo.completed).length;
+  const totalTodos = todos.length;
+  console.log(totalTodos);
+  console.log("el usuario escribio "+searchValue);
   return (
   
     <React.Fragment>
-      <TodoHeader name={"Mara"} total={25} completed={16}/>
-      <TodoSearch/>
+      <TodoHeader nickname={"Mara"} total={totalTodos} completed={completedTodos}/>
+      <TodoSearch
+        searchValue={searchValue} 
+        setSearchValue={setSearchValue}
+      />
       <TodoList>
         {defaultArr.map(todo => (
            <TodoItem key={todo.text} text={todo.text} completed={todo.completed}/>
