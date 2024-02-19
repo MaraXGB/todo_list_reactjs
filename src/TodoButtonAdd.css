@@ -6,8 +6,8 @@
     height: auto;
     margin: 10px 24px;
     padding: 5px 0;
-    font-family: 'Montserrat';
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     font-weight: 700;
     color: whitesmoke;
     position: absolute;

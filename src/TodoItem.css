@@ -22,35 +22,4 @@
     text-decoration: line-through;
   }
   
-  .Icon {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 48px;
-    font-size: 24px;
-    font-weight: bold;
-    /* background-color: #CCC; */
-  }
-  
-  .Icon-check {
-    position: absolute;
-    left: 12px;
-    text-shadow: none;
-    color: #636363;
-  }
-  .Icon-check--active {
-    color: #b0f2b2;
-  }
-  
-  .Icon-delete {
-    position: relative;
-    top: 0;
-    right: 0;
-    text-shadow: none;
-    font-weight: 100;
-  }
-  .Icon-delete:hover {
-    color: rgb(246, 163, 163);
-  }
+ 

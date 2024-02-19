@@ -1,0 +1,39 @@
+.Icon-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    /* background-color: #CCC; */
+  }
+  
+  .Icon-container-check {
+    position: absolute;
+    left: 12px;
+    text-shadow: none;
+    color: #636363;
+  }
+  .Icon-container-check--active {
+    color: #8cde8f;
+  }
+  
+  .Icon-container-delete {
+    position: relative;
+    top: 0;
+    right: 0;
+    text-shadow: none;
+    font-weight: 100;
+  }
+  .Icon-container-delete:hover .Icon-svg {
+    fill: rgb(244, 144, 144);
+  }
+  .Icon-container-check:hover .Icon-svg {
+    fill: #8cde8f;
+  }
+  .Icon-svg{
+    width: 24px;
+    height: 24px;
+  }

@@ -9,6 +9,9 @@ import './TodoCounter.css'
 function TodoCounter({ total, completed }){
     return(
       /****ELEMENTOS */ 
+      total == completed ?
+        <h2>Felicidades!! has completado todos tus TODOs</h2>
+        :
         <h2>Has completado <span>{completed}</span> de <span>{total}</span> TODOs</h2>
     );
   }
