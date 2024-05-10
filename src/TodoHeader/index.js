@@ -1,6 +1,6 @@
 import react from "react";
 import './TodoHeader.css';
-import { TodoCounter } from "./TodoCounter.js";
+import { TodoCounter } from "../TodoCounter";
 function TodoHeader(props){
     return(
       /****ELEMENTOS */

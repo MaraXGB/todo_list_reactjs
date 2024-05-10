@@ -3,16 +3,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 24px;
-    width: 24px;
-    font-size: 24px;
+    height: 18px;
+    width: 18px;
+    font-size: 18px;
     font-weight: bold;
     /* background-color: #CCC; */
   }
   
   .Icon-container-check {
     position: absolute;
-    left: 12px;
+    left: 10px;
     text-shadow: none;
     color: #636363;
   }
@@ -22,8 +22,8 @@
   
   .Icon-container-delete {
     position: relative;
-    top: 0;
-    right: 0;
+    top: -15px;
+    right: -50px;
     text-shadow: none;
     font-weight: 100;
   }
@@ -34,6 +34,6 @@
     fill: #8cde8f;
   }
   .Icon-svg{
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
   }

@@ -1,10 +1,10 @@
 .TodoSearch {
     border-radius: 10px;
     border: 2px solid #dbdbdb;
-    margin: 0 24px;
+    /* margin: 0 24px; */
     height: 40px;
     padding-left: 40px;
-    width: calc(100% - 62px);
+    width: calc(100% - 22px);
     font-size: 18px;
     text-align: left;
     font-family: 'Montserrat';
@@ -13,13 +13,13 @@
   }
   .todo-search{
     position: relative;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
   }
   .search-icon{
     position: absolute;
     font-size: 24px;
-    left: 35px;
+    left: 10px;
     top: 8px;
     color: #A5A5A5;
     text-shadow: none;

@@ -1,6 +1,6 @@
 .todo-header {
     position: relative;
-    height: 500px;
+    height: 250px;
     background: #0b345d;
     background-image: linear-gradient(155deg, #e6e6e6 0%, #eaeaea 50%, #ffffff 100%);
   }
@@ -13,10 +13,11 @@
 .todo-header--container h1 {
     color: rgb(89, 89, 89);
     padding-top: 20px;
+    font-size: 18px;
   }
   .todo-header--container span{
     color: #023A69;
-    
+    font-size: 24px;
   }  
   svg {
     position: absolute;
@@ -25,7 +26,7 @@
     height: auto;
   }
   .todo-header--container img{
-    width: 60px;
+    width: 40px;
     height: auto;
     position: absolute;
     left: 0;

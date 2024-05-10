@@ -1,8 +1,8 @@
 import React from 'react';
 import './CreateTaskModal.css';
-import './TodoButtonCancel.js';
-import { TodoButtonAdd } from './TodoButtonAdd.js';
-import { TodoButtonCancel } from './TodoButtonCancel.js';
+import '../TodoButtonCancel';
+import { TodoButtonAdd } from '../TodoButtonAdd';
+import { TodoButtonCancel } from '../TodoButtonCancel';
 function CreateTaskModal() {
   return (
     <div className='modal-task hidde'>

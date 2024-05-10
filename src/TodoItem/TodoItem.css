@@ -11,12 +11,12 @@
   }
   
   .TodoItem-p {
-    margin: 24px 0 24px 24px;
+    margin: 18px 0 18px 0;
     width: calc(100% - 120px);
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 400;
-    padding-left: 20px;
+    padding-left: 0;
   }
   .TodoItem-p--complete {
     text-decoration: line-through;
