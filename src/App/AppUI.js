@@ -11,19 +11,23 @@ import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
 import { setInterval } from 'react';
 import { TodoContext } from '../TodoContext';
+import { Modal } from '../Modal';
 
 
-function AppUI({
-    loading,
-    error,
-    totalTodos,
-    completedTodos,
-    searchValue,
-    setSearchValue,
-    searchedTodos,
-    completeTodo,
-    deleteTodo,
-    colorProgress}){
+function AppUI(){
+    const {
+      loading,
+      error,
+      totalTodos,
+      completedTodos,
+      searchValue,
+      setSearchValue,
+      searchedTodos,
+      completeTodo,
+      deleteTodo,
+      openModal,
+      setOpenModal,
+      colorProgress,} = React.useContext(TodoContext);
     return (
   
         <React.Fragment>
@@ -56,7 +60,11 @@ function AppUI({
             )}
           </TodoContext.Consumer>
           <CreateTodoButton/>
-          <CreateTaskModal/>
+          {openModal && (
+              <Modal>
+                <CreateTaskModal/>
+              </Modal>
+            )}
          {/* Esto es un comentario */}
          {/* <TodoProgress progress={colorProgress}/> */}
         </React.Fragment>

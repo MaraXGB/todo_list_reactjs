@@ -1,5 +1,5 @@
 .modal-task{
-    width: 30%;
+    width: 80%;
     height: 100vh;
     background-color: whitesmoke;
     position: fixed;
@@ -9,8 +9,10 @@
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
+    animation: modalIn ease-in 1s;
 }
 .hidde{
+    animation: modalOut ease-out 1s;
     display:none;
 }
 .task-title{
@@ -34,7 +36,8 @@
     margin: 10px 24px;
     height: 40px;
     padding-left: 40px;
-    width: calc(100% - 62px);
+
+    width: calc(100% - 42px);
     font-size: 16px;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
@@ -46,9 +49,37 @@
 }
 @media (max-width:320px){
     .modal-task{
-        width: 70%;
+        width: 80%;
     }
     .task-input{
         padding-left: 10px;
     }
 } 
+@keyframes modalIn {
+    0% {
+        transform: translateX(200px);
+        animation-timing-function:ease-in;
+    }
+    50% {
+        transform: translateX(100px);
+       animation-timing-function:ease-in;
+    }
+    100% {
+        transform: translateX(0px);
+       animation-timing-function:ease-in;
+    }
+  }
+  @keyframes modalOut {
+    0% {
+        transform: translateX(0px);
+        animation-timing-function:ease-in;
+    }
+    50% {
+        transform: translateX(100px);
+       animation-timing-function:ease-in;
+    }
+    100% {
+        transform: translateX(200px);
+       animation-timing-function:ease-in;
+    }
+  }

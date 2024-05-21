@@ -9,8 +9,13 @@ function TodoProvider({children}){
         loading,
         error
        } = useLocalStorage('TODOS_V1',[]);
+
  const [searchValue, setSearchValue] = React.useState("");
+
+ const [openModal, setOpenModal] = React.useState(false);
+
  const [colorProgress, setColorProgress] = React.useState(0);
+ 
 // const [searchedTodos, set]
  let completedTodos = todos.filter(todo => !!todo.completed).length;
  let totalTodos = todos.length;
@@ -48,6 +53,12 @@ function TodoProvider({children}){
    newTodos.splice(todoIndex,1);
    saveTodos(newTodos);
  }
+ const toggleModal = () => {
+    const newModal = !openModal;
+    
+    setOpenModal(newModal);
+
+ }
  // const progressChart = document.querySelector('.progress-chart');
 
  //   const progressEndValue = props.progress;
@@ -70,6 +81,9 @@ function TodoProvider({children}){
     searchedTodos,
     completeTodo,
     deleteTodo,
+    openModal,
+    setOpenModal,
+    toggleModal,
     colorProgress,
   }}>
     {children}
