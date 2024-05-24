@@ -4,23 +4,31 @@ import { useLocalStorage } from './useLocalStorage';
 const TodoContext = React.createContext();
 //Crear provider personalizado
 function TodoProvider({children}){
-    const {item:todos,
-        saveItem: saveTodos,
-        loading,
-        error
-       } = useLocalStorage('TODOS_V1',[]);
+  const {item:todos,
+      saveItem: saveTodos,
+      loading,
+      error
+      } = useLocalStorage('TODOS_V1',[]);
+  const {item:user,
+    saveItem: saveUser,
+    loaging: load,
+    error: err
+    } = useLocalStorage('USUARIO',[]);
 
- const [searchValue, setSearchValue] = React.useState("");
+  const [searchValue, setSearchValue] = React.useState("");
 
- const [openModal, setOpenModal] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState(false);
 
- const [colorProgress, setColorProgress] = React.useState(0);
+  const[isClosed, setIsClosed] = React.useState(true);
+
+  const [newNickname, setNewNickname] = React.useState("User1");
+
+  const [colorProgress, setColorProgress] = React.useState(0);
  
-// const [searchedTodos, set]
- let completedTodos = todos.filter(todo => !!todo.completed).length;
- let totalTodos = todos.length;
- console.log(totalTodos);
-
+  let completedTodos = todos.filter(todo => !!todo.completed).length;
+  let totalTodos = todos.length;
+  let nickname = user.nickname;
+  let photo = user.photo; 
  // console.log('Log 1');
  // //Se ejecutara al final y solo cuando totalTodos cambie su valor
  // React.useEffect(() => {
@@ -55,9 +63,21 @@ function TodoProvider({children}){
  }
  const toggleModal = () => {
     const newModal = !openModal;
-    
     setOpenModal(newModal);
-
+ }
+ const addTodo = (text) =>{
+  const newTodos = [...todos];
+  newTodos.push({text, completed: false,});
+  saveTodos(newTodos);
+ }
+ const toggleMenu = ()=> {
+   const newMenu = !isClosed;
+    setIsClosed(newMenu);
+}
+const changeProfile = (text, photo) =>{
+  const newUser =  {nickname: text, photo: photo};
+  console.log(newUser);
+  saveUser(newUser);
  }
  // const progressChart = document.querySelector('.progress-chart');
 
@@ -84,6 +104,17 @@ function TodoProvider({children}){
     openModal,
     setOpenModal,
     toggleModal,
+    addTodo,
+    isClosed,
+    setIsClosed,
+    toggleMenu,
+    changeProfile,
+    nickname,
+    photo,
+    load, 
+    err,
+    newNickname,
+    setNewNickname,
     colorProgress,
   }}>
     {children}

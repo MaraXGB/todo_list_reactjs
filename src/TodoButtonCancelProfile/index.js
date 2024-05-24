@@ -2,16 +2,16 @@ import React from 'react';
 import './TodoButtonCancel.css';
 import { TodoContext } from '../TodoContext';
 
-function TodoButtonCancel(){
+function TodoButtonCancelProfile(){
     const {
-        setOpenModal
+        setIsClosed
     } = React.useContext(TodoContext);
     const onCancel = (event) => {
         event.preventDefault();
-        setOpenModal(false);
+        setIsClosed(false);
       };
     return (
         <button className='button-cancel' onClick={onCancel}>Cancelar</button>
     );
 }
-export { TodoButtonCancel };
+export { TodoButtonCancelProfile };

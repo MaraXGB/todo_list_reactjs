@@ -1,4 +1,4 @@
-.modal-task{
+.menu-profile{
     width: 80%;
     height: 60vh;
     background-color: whitesmoke;
@@ -9,21 +9,23 @@
     z-index: 50;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: 'Montserrat', sans-serif;
-    animation: modalIn ease-in 1s;
+    animation: menuIn ease-in 1s;
 }
 .hidde{
-    animation: modalOut ease-out 1s;
+    animation: menuOut ease-out 1s;
     display:none;
 }
-.task-title{
+.profile-title{
     text-align: center;
     
     color: #1E1E1F;
     margin-top: 40px;
     margin-bottom: 40px;
 }
-.task-label{
+.nickname-label{
+    align-items: left;
     padding-left: 26px;
     text-align: left;
     font-size: 18px;
@@ -31,7 +33,7 @@
     color: #1E1E1F;
     font-weight: bold;
 }
-.task-input{
+.nickname-input{
     border-radius: 10px;
     border: 2px solid #dbdbdb;
     margin: 10px 24px;
@@ -45,18 +47,80 @@
     font-weight: 400;
     color: #1E1E1F;
 }
-.task-input:focus {
+.nickname-input:focus {
     outline-color: #61DAFA;
 }
+/**********File Inputs**********/
+.container-input {
+    text-align: center;
+    background: #282828;
+    border-top: 5px solid #c39f77;
+    padding: 50px 0;
+    border-radius: 6px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+    position: absolute;
+    top: 61%;
+    left: 15%;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.iborrainputfile {
+	font-size:16px; 
+	font-weight:normal;
+	font-family: 'Lato';
+}
+
+.inputfile-1 + label {
+    color: #023A69;
+    background-color: #c3a07700;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+    border-color: #023A69;
+}
+
 @media (max-width:320px){
-    .modal-task{
+    .menu-profile{
         width: 80%;
     }
-    .task-input{
+    .nick-input{
         padding-left: 10px;
     }
 } 
-@keyframes modalIn {
+@keyframes menuIn {
     0% {
         transform: translateX(200px);
         animation-timing-function:ease-in;
@@ -70,7 +134,7 @@
        animation-timing-function:ease-in;
     }
   }
-  @keyframes modalOut {
+  @keyframes menuOut {
     0% {
         transform: translateX(0px);
         animation-timing-function:ease-in;

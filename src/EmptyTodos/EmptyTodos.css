@@ -1,0 +1,16 @@
+.todo-empty{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+img{
+    width: 200px;
+    height: auto;
+}
+p{
+    font-family: 'Montserrat';
+    color: #A5A5A5;
+    text-align: center;
+}

@@ -12,12 +12,15 @@ import { EmptyTodos } from '../EmptyTodos';
 import { setInterval } from 'react';
 import { TodoContext } from '../TodoContext';
 import { Modal } from '../Modal';
+import { TodoButtonProfile } from '../TodoButtonProfile';
+import { MenuProfile } from '../MenuProfile';
+import { TodoMenuProfile } from '../TodoMenuProfile';
 
 
 function AppUI(){
     const {
-      loading,
-      error,
+      load,
+      err,
       totalTodos,
       completedTodos,
       searchValue,
@@ -27,11 +30,34 @@ function AppUI(){
       deleteTodo,
       openModal,
       setOpenModal,
-      colorProgress,} = React.useContext(TodoContext);
+      isClosed,
+      setIsClosed,
+      nickname,
+      photo,
+      toggleMenu,
+
+      colorProgress} = React.useContext(TodoContext);
     return (
   
         <React.Fragment>
-          <TodoHeader nickname={"Mara"} total={totalTodos} completed={completedTodos}/>
+          {load && photo!=undefined && photo!="" && <TodosLoading/>}
+          {err && <TodosError/>}
+
+                <TodoHeader nickname={nickname} 
+                photo = {photo}
+                total={totalTodos} 
+                completed={completedTodos}
+                isClosed={isClosed}
+                toggleMenu={() => toggleMenu()}
+                />
+
+          
+          
+           {isClosed && (
+              <MenuProfile>
+                <TodoMenuProfile/>
+              </MenuProfile>
+            )}
           <TodoSearch
             searchValue={searchValue} 
             setSearchValue={setSearchValue}

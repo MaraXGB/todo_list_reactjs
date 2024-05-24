@@ -27,6 +27,15 @@
     text-shadow: none;
     font-weight: 100;
   }
+  .Icon-container-closed, .Icon-container-open {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    text-shadow: none;
+    font-weight: 100;
+    color: #023A69;
+  }
+  
   .Icon-container-delete:hover .Icon-svg {
     fill: rgb(244, 144, 144);
   }
@@ -36,4 +45,8 @@
   .Icon-svg{
     width: 18px;
     height: 18px;
+  }
+  .Icon-svg-menu{
+    width: 30px;
+    height: 30px;
   }
