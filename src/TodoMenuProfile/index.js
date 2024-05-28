@@ -35,7 +35,7 @@ function TodoMenuProfile() {
     event.preventDefault();
     console.log(selectedFile);
     changeProfile(newNickname,selectedFile);
-    setIsClosed(false);
+    setIsClosed(true);
   };
   
   const onChange = (event) => {

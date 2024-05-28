@@ -12,6 +12,13 @@
     font-family: 'Montserrat', sans-serif;
     animation: modalIn ease-in 1s;
 }
+/* .button-container{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
 .hidde{
     animation: modalOut ease-out 1s;
     display:none;
@@ -45,6 +52,9 @@
     font-weight: 400;
     color: #1E1E1F;
 }
+.border-red{
+    border: 2px solid #cf3535;
+}
 .task-input:focus {
     outline-color: #61DAFA;
 }
@@ -56,6 +66,23 @@
         padding-left: 10px;
     }
 } 
+@media (min-width: 700px){
+    /* .button-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } */
+    .modal-task{
+        width: 45%;
+        height: 40vh;
+        position: fixed;
+        right: 0;
+        top:48%;
+    }
+    .task-title{
+        margin: 20px 0;
+    }
+}
 @keyframes modalIn {
     0% {
         transform: translateX(200px);

@@ -1,4 +1,7 @@
-.button-cancel{
+.button-cancel-profile{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
     background-color: whitesmoke;
     border-radius: 10px;
     border: none;
@@ -14,7 +17,12 @@
     bottom: 10px;
     cursor: pointer;
 }
-.button-cancel:hover{
+.button-cancel-profile:hover{
     background-color: #0b345d;
     color: whitesmoke;
+}
+@media (min-width: 700px){
+    .button-cancel-profile{
+        width: calc(50% - 62px);
+    }
 }

@@ -28,3 +28,8 @@
 .show{
     display: flex;
 }
+@media (min-width: 700px){
+    .create-todo-button{
+        display: none;
+    }
+}

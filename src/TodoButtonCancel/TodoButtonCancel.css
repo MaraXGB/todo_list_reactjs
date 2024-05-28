@@ -1,20 +1,26 @@
 .button-cancel{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: calc(100% - 62px);
+    height: auto;
     background-color: whitesmoke;
     border-radius: 10px;
     border: none;
-    width: calc(100% - 62px);
-    height: auto;
     margin: 10px 24px;
     padding: 5px 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #0b345d;
-    position: absolute;
-    bottom: 10px;
     cursor: pointer;
 }
 .button-cancel:hover{
     background-color: #0b345d;
     color: whitesmoke;
+}
+@media (min-width: 700px){
+    .button-cancel{
+        width: calc(50% - 62px);
+    }
 }

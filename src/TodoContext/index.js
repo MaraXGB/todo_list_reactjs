@@ -63,6 +63,7 @@ function TodoProvider({children}){
  }
  const toggleModal = () => {
     const newModal = !openModal;
+    //console.log(newModal);
     setOpenModal(newModal);
  }
  const addTodo = (text) =>{
@@ -72,11 +73,12 @@ function TodoProvider({children}){
  }
  const toggleMenu = ()=> {
    const newMenu = !isClosed;
-    setIsClosed(newMenu);
+   console.log("le diste click");
+   setIsClosed(newMenu);
 }
 const changeProfile = (text, photo) =>{
   const newUser =  {nickname: text, photo: photo};
-  console.log(newUser);
+  //console.log(newUser);
   saveUser(newUser);
  }
  // const progressChart = document.querySelector('.progress-chart');

@@ -1,5 +1,5 @@
 import React from 'react';
-import './TodoButtonCancel.css';
+import './TodoButtonCancelProfile.css';
 import { TodoContext } from '../TodoContext';
 
 function TodoButtonCancelProfile(){
@@ -8,10 +8,10 @@ function TodoButtonCancelProfile(){
     } = React.useContext(TodoContext);
     const onCancel = (event) => {
         event.preventDefault();
-        setIsClosed(false);
+        setIsClosed(true);
       };
     return (
-        <button className='button-cancel' onClick={onCancel}>Cancelar</button>
+        <button className='button-cancel-profile' onClick={onCancel}>Cancelar</button>
     );
 }
 export { TodoButtonCancelProfile };

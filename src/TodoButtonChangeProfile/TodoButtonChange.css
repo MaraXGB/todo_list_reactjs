@@ -1,4 +1,7 @@
 .button-change{
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
     background-color: #0b345d;
     border-radius: 10px;
     border: none;
@@ -23,4 +26,10 @@
 }
 .show{
     display: block;
+}
+@media (min-width: 700px){
+    .button-change{
+        width: calc(50% - 62px);
+        bottom: 10px;
+    }
 }

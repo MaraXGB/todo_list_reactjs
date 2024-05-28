@@ -14,10 +14,12 @@ function TodoHeader(props){
       /****ELEMENTOS */
       <div className="todo-header">
         <div className="todo-header--container">
-        <TodoButtonProfile isClosed={props.isClosed} toggleMenu={props.toggleMenu}/>
+        {/* <TodoButtonProfile isClosed={props.isClosed} toggleMenu={props.toggleMenu}/> */}
          {/* <img src='https://nexdevus.com/assets/icons/logo_icono.png'/> */}
           {/* <img src={require(`${picture}`)}/> */}
-          {picture && <img src={picture} alt="Imagen almacenada" />}
+         <div className="img-container" onClick={props.toggleMenu}>
+          <img src={picture} alt="Imagen almacenada" />
+          </div>
           <h1>Hola, <span>{nicknm}!</span> </h1>
           <TodoCounter total={props.total} completed={props.completed}/>
           </div>

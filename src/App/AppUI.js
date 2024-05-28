@@ -19,6 +19,8 @@ import { TodoMenuProfile } from '../TodoMenuProfile';
 
 function AppUI(){
     const {
+      loading,
+      error,
       load,
       err,
       totalTodos,
@@ -35,40 +37,35 @@ function AppUI(){
       nickname,
       photo,
       toggleMenu,
-
       colorProgress} = React.useContext(TodoContext);
     return (
   
         <React.Fragment>
           {load && photo!=undefined && photo!="" && <TodosLoading/>}
           {err && <TodosError/>}
-
-                <TodoHeader nickname={nickname} 
+           <TodoHeader nickname={nickname} 
                 photo = {photo}
                 total={totalTodos} 
                 completed={completedTodos}
                 isClosed={isClosed}
                 toggleMenu={() => toggleMenu()}
                 />
-
-          
-          
-           {isClosed && (
+           {!isClosed && (
               <MenuProfile>
                 <TodoMenuProfile/>
               </MenuProfile>
             )}
-          <TodoSearch
+
+          {!loading && (<TodoSearch
             searchValue={searchValue} 
             setSearchValue={setSearchValue}
-          />
+          />)}
           {/* Encapsular el componente que requiere las propiedades que estan en el contexto */}
-          <TodoContext.Consumer>
-            {({loading,
-              error,
+          {/* <TodoContext.Consumer>
+            {({
               searchedTodos,
               completeTodo,
-              deleteTodo}) => (
+              deleteTodo}) => ( */}
                 <TodoList>
                 {loading && <TodosLoading/>}
                 {error && <TodosError/>}
@@ -83,14 +80,16 @@ function AppUI(){
                   onDelete={() => deleteTodo(todo.text)}/>
                   ))}
               </TodoList>
-            )}
-          </TodoContext.Consumer>
+            {/* )}
+          </TodoContext.Consumer> */}
+
           <CreateTodoButton/>
-          {openModal && (
+          {!loading && (openModal || window.matchMedia("(min-width: 700px)").matches) && (
               <Modal>
                 <CreateTaskModal/>
               </Modal>
             )}
+           
          {/* Esto es un comentario */}
          {/* <TodoProgress progress={colorProgress}/> */}
         </React.Fragment>
