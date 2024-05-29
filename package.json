@@ -29,5 +29,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "https://MaraXGB.github.io/todo_list_reactjs",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
