@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/todo_list_reactjs/static/css/main.7c76cb79.css",
+    "main.css": "/todo_list_reactjs/static/css/main.66554901.css",
     "main.js": "/todo_list_reactjs/static/js/main.c1870d99.js",
     "static/media/empty_todo.jpg": "/todo_list_reactjs/static/media/empty_todo.a1644cc7fadb7d19cbc7.jpg",
     "index.html": "/todo_list_reactjs/index.html",
@@ -8,11 +8,11 @@
     "static/media/check.svg": "/todo_list_reactjs/static/media/check.af03c9a6a0411e40578874e6f00e807b.svg",
     "static/media/menu_open.svg": "/todo_list_reactjs/static/media/menu_open.447d506bfc6fd56356ebac9b90daa685.svg",
     "static/media/menu_closed.svg": "/todo_list_reactjs/static/media/menu_closed.61034f2a41b354f1cdc6b027e83764df.svg",
-    "main.7c76cb79.css.map": "/todo_list_reactjs/static/css/main.7c76cb79.css.map",
+    "main.66554901.css.map": "/todo_list_reactjs/static/css/main.66554901.css.map",
     "main.c1870d99.js.map": "/todo_list_reactjs/static/js/main.c1870d99.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c76cb79.css",
+    "static/css/main.66554901.css",
     "static/js/main.c1870d99.js"
   ]
 }
