@@ -53,6 +53,9 @@
     }
   }
   @media (min-width: 1440px){
+    .todo-header{
+      height: 60vh;
+    }
     .img-container{
       width: 100px;
       height: 100px;
