@@ -43,7 +43,7 @@
     border: 2px solid #dbdbdb;
     margin: 10px 24px;
     height: 40px;
-    padding-left: 40px;
+    padding-left: 20px;
 
     width: calc(100% - 42px);
     font-size: 16px;
@@ -81,6 +81,17 @@
     }
     .task-title{
         margin: 20px 0;
+    }
+    .modal-task textarea{
+        height: 50px;
+    }
+}
+@media (min-width: 1440px){
+    .modal-task{
+        height: 30vh;
+    }
+    .modal-task textarea{
+        height: 80px;
     }
 }
 @keyframes modalIn {

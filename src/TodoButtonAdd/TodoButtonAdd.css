@@ -29,5 +29,13 @@
     .button-add{
         width: calc(50% - 62px);
         bottom: 10px;
+        left: 55%;
+    }
+}
+@media (min-width: 1440px){
+    .button-add{
+        width: calc(30% - 62px);
+        bottom: 10px;
+        left: 72%;
     }
 }

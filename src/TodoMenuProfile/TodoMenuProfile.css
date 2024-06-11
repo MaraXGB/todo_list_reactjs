@@ -125,6 +125,19 @@
         width: 45%;
     }
 }
+@media (min-width:1440px){
+    .menu-profile{
+        height: 40vh;
+    }
+    .nickname-input{
+        width: 80%;
+    }
+    .inputfile + label svg {
+        margin: 0;
+        top: 63%;
+        left: 35%;
+    }
+}
 @keyframes menuIn {
     0% {
         transform: translateX(200px);

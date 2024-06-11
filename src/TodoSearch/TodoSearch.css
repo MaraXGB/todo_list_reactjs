@@ -4,7 +4,7 @@
     /* margin: 0 24px; */
     height: 40px;
     padding-left: 40px;
-    width: calc(100% - 22px);
+    width: calc(100%);
     font-size: 18px;
     text-align: left;
     font-family: 'Montserrat';
@@ -35,6 +35,10 @@
   }
   @media (min-width: 700px){
     .TodoSearch{
-      width: calc(50% - 22px);
+      width: 100%;
+    }
+    .todo-search{
+      width: 40%;
+      margin: 0 50px;
     }
   }
